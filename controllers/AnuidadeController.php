@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $valor = $_POST['valor'];
 
     if (!empty($ano) && !empty($valor)) {
-        $anuidade = new Anuidade($conn);
+        $anuidade = new Anuidade($pdo);
         $anuidade->cadastrar($ano, $valor);
 
         $_SESSION['mensagem'] = "Anuidade cadastrada com sucesso!";

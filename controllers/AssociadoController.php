@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     filter_var($email, FILTER_VALIDATE_EMAIL);
 
     if (!empty($nome) && !empty($email) && !empty($cpf) && !empty($data_filiacao)) {
-        $associado = new Associado($conn);
+        $associado = new Associado($pdo);
         $associado->cadastrar($nome, $email, $cpf, $data_filiacao);
 
         $_SESSION['mensagem'] = "Associado cadastrado com sucesso!";
