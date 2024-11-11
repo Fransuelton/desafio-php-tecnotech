@@ -16,4 +16,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     } else {
         $_SESSION['mensagem'] = "Ano e valor são obrigatórios!";
     }
+
+    header("Location: ../views/cadastro_anuidade.php");
+    exit;
 }
