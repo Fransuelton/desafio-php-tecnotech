@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SGAA - Cadastro de Associados</title>
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/views/styles.css">
+    <link rel="stylesheet" href="../assets/css/variables.css">
 </head>
 
 <body>
-    <main>
-        <h1>SGAA - Cadastro de Associados</h1>
+    <main class="main">
+        <h1 class="title">SGAA - Cadastro de Associados</h1>
 
         <?php
         session_start();
@@ -19,8 +22,7 @@
         }
         ?>
 
-        <fieldset>
-            <legend>Cadastro de Associados</legend>
+        <div>
             <form action="../controllers/AssociadoController.php" method="post">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" required>
@@ -36,12 +38,10 @@
 
                 <button type="submit">Cadastrar</button>
             </form>
-        </fieldset>
+        </div>
+
+        <a href="../index.php" class="link">Voltar para a página principal</a>
     </main>
-
-    <script>
-
-    </script>
 </body>
 
 </html>
