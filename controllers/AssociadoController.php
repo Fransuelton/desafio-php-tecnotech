@@ -16,14 +16,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $associado->cadastrar($nome, $email, $cpf, $data_filiacao);
 
         $_SESSION['mensagem'] = "Associado cadastrado com sucesso!";
-        
     } else {
         $_SESSION['mensagem'] = "Nome, e-mail, CPF e data de filiação são obrigatórios!";
-        
     }
 
     header("Location: ../views/cadastro_associado.php");
     exit;
 }
-
-
